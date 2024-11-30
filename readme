@@ -1,0 +1,146 @@
+"CloudBank Analytics" is a comprehensive cloud-based banking data analytics and reporting system designed to streamline financial data processing, analysis, and visualization. The project leverages Amazon Web Services (AWS) for robust and scalable infrastructure, utilizing Amazon RDS for secure and efficient data storage, AWS Elastic Beanstalk for reliable web application hosting, and AWS Lambda for automated data processing and report generation.cenarios
+Scenario 1: Real-time Transaction Monitoring
+Sarah, a bank's fraud detection analyst, logs into CloudBank Analytics during her morning routine. The dashboard immediately alerts her to unusual transaction patterns detected overnight. Using the real-time analytics feature, Sarah quickly investigates the flagged transactions, confirms a potential fraud attempt, and takes immediate action to protect the affected accounts.
+
+Scenario 2: Custom Report Generation
+John, a financial manager, needs to prepare a comprehensive quarterly report for the board meeting. He logs into CloudBank Analytics and uses the custom report generation feature. John selects various metrics such as loan performance, deposit growth, and customer acquisition rates. The system, leveraging AWS Lambda, quickly processes the vast amount of data stored in Amazon RDS and generates a detailed report, which is then stored in Amazon S3 for easy access and sharing.
+
+Scenario 3: Regulatory Compliance Monitoring
+Lisa, a compliance officer, uses CloudBank Analytics to ensure the bank meets all regulatory requirements. She accesses a specialized dashboard that tracks key compliance metrics in real-time. When she notices that a particular metric is approaching a regulatory threshold, she uses the system to drill down into the underlying data, identify the root cause, and initiate corrective actions before any compliance issues arise.
+
+Create AWS Account
+1. Go to the AWS website.
+
+2. Click on the "Create an AWS Account" button.
+
+3. Follow the prompts to enter your email address and choose a password.
+
+4. Provide the required account information, including your name, address, and phone number.
+
+5. Enter your payment information. (Note: While AWS offers a free tier, a credit card is required for verification.)
+
+6. Complete the identity verification process.
+
+7. Choose a support plan (the basic plan is free and sufficient for starting).
+
+8. Sign in to your new AWS account.
+
+Set Up IAM Users and Permissions
+1. Access the IAM console from the AWS Management Console.
+
+2. Create a new IAM user for yourself with administrative access.
+
+3. Set up multi-factor authentication (MFA) for added security.
+
+4. Create a group for developers and assign necessary permissions.
+
+5. Generate access keys for programmatic access if needed.
+
+Set Up Local Development Environment
+1. Install Python and pip on your local machine.
+
+2. Install Flask and other necessary Python packages (e.g., `flask-sqlalchemy`, `mysql-connector-python`).
+
+3. Set up a virtual environment for your project.
+
+Create Flask Application Structure
+1. Create a new directory for your Easybank project.
+
+2. Set up a basic Flask application structure:
+Create Web Pages
+1. Design and create HTML templates for your banking application, including:
+
+   - Home page
+
+   - User registration page
+
+   - Login page
+
+   - Account dashboard
+
+   - Transaction page
+
+   - Account creation page
+
+   - Check Balance page
+
+   - Deposit page
+
+   - Services page
+
+   - Contact Page
+
+   - confirm page
+
+   -Account Login page
+
+   - Statement page
+
+2. Place these templates in the `templates/` directory.
+
+3. Create CSS files in the `static/css/` directory for styling.
+
+4. Add any necessary JavaScript files in the `static/js/` directory.
+
+Implement Flask Routes and Views
+1. In `app.py`, create Flask routes for each of your web pages.
+
+2. Implement view functions to render the appropriate templates.
+
+3. Add form handling for user input (registration, login, transactions, etc.).
+
+Create Amazon RDS Instance
+Access RDS Console from the AWS Management Console.
+
+Create a new RDS instance:
+
+Choose MySQL as the engine type.
+
+Select an appropriate instance size (e.g., db.t3.micro for testing).
+
+Configure storage, network settings, and security groups.
+
+Set up the master username and password.
+
+Make sure to allow connections from your local IP for development and testing.
+
+Note down the endpoint, port, database name, username, and password.
+
+Launch EC2 Instance
+1. Access EC2 Console from the AWS Management Console.
+
+2. Launch a new EC2 instance:
+
+   - Choose an Amazon Linux 2 AMI.
+
+   - Select an appropriate instance type (e.g., t2.micro for testing).
+
+   - Configure instance details, including VPC and subnet.
+
+   - Add storage as needed.
+
+   - Configure security group to allow SSH (port 22) and HTTP/HTTPS (ports 80/443).
+
+3. Create or select an existing key pair for SSH access.Set Up CloudWatch Monitoring
+1. Access the CloudWatch console from the AWS Management Console.
+
+2. Create a new dashboard for your Easybank application.
+
+3. Add widgets to monitor key metrics:
+
+   - EC2 instance CPU utilization, network traffic, and status checks
+
+   - RDS instance CPU utilization, free storage space, and database connections
+
+   - Application-specific metrics (e.g., number of transactions, active users)
+
+4. Set up CloudWatch Alarms for critical thresholds (e.g., high CPU usage, low free storage).
+
+
+Conduct Thorough Testing
+1. Perform functionality testing of all banking features.
+
+2. Conduct security testing, including penetration testing if possible.
+
+3. Perform load testing to ensure the application can handle expected traffic.
+
